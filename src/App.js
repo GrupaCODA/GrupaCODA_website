@@ -1,25 +1,58 @@
 import React from 'react';
-import logo from './logo.svg';
 import './App.css';
+import {BrowserRouter as Router, Route, Switch, Link} from 'react-router-dom';
+import styled from "styled-components";
 
-function App() {
+import Home from './pages/home';
+import Contact from "./pages/contact";
+import Services from "./pages/services";
+
+import Hamburder from "./components/Hamburger";
+import Logo from "./assets/logo.jpg";
+
+
+const App = () => {
+
+    const NavStyled = styled.nav`
+    
+    position: fixed;
+    width: 100%;
+    padding: 0;
+    margin: 0;
+    top: 0;
+    left: 0;
+    z-index: 999;
+    background: transparent;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    
+    
+    `;
+
+    const LogoStyled = styled.img`
+width: 40%;
+height: auto;
+
+`;
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+      <Router>
+          <div className="App">
+              <NavStyled>
+                  <Link to='/'>
+                  <LogoStyled src={Logo}></LogoStyled>
+                  </Link>
+                  <Hamburder/>
+              </NavStyled>
+            <Switch>
+              <Route  path="/" exact component={Home} />
+              <Route path="/contact" component={Contact} />
+              <Route path="/services" component={Services} />
+            </Switch>
+          </div>
+      </Router>
   );
 }
 
