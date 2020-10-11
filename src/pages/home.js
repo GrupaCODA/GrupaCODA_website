@@ -1,4 +1,4 @@
-import React from 'react';
+import React, {useEffect} from 'react';
 import styled from 'styled-components';
 
 import HeroImage from "../components/HeroImage";
@@ -13,6 +13,7 @@ import OrangeLogo from '../assets/orange logo.png';
 import KauflandLogo from '../assets/Kaufland logo.png';
 import KoalaLogo from '../assets/koala logo.jpg';
 import ImpresjaLogo from '../assets/impresjanet logo.png';
+import {slideUpText} from "../components/animation";
 
 const Partners = [
     {
@@ -52,14 +53,22 @@ const PartnersInnerStyled = styled.div`
     `;
 
 const SubjectStyled = styled.h2`
-    
+    border-top: 1px solid;
+    border-color: #a5a5a5;
+    padding: 20px;
     width: 100%;
     font-size: 30px;
-    color: #000000;
+    color: #1a1a1a;
     text-align: center;
     `;
 
 const Home = () => {
+
+    useEffect(() => {
+        const section = document.querySelectorAll("section")
+
+        slideUpText(section)
+    })
 
 
     return (

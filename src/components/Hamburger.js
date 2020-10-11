@@ -26,7 +26,7 @@ const Hamburger = () => {
     const HamburgerInnerStyled = styled.span`
     width: 100%;
     height: 3px;
-    background-color: whitesmoke;
+    background-color: #1a1a1a;
     position: absolute;
     right: 0;
     top: 50%;
@@ -36,7 +36,7 @@ const Hamburger = () => {
         width: 50%;
         height: 3px;
         position: absolute;
-        background-color: whitesmoke;
+        background-color: #1a1a1a;
         right: 0;
         top: -10px;
         transition: transform .2s .1s ease-in-out;
@@ -46,7 +46,7 @@ const Hamburger = () => {
         width: 50%;
         height: 3px;
         position: absolute;
-        background-color: whitesmoke;
+        background-color: #1a1a1a;
         left: 0;
         top: 10px;
         transition: transform .2s .1s ease-in-out;

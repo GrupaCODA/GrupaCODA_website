@@ -43,7 +43,7 @@ const RouterNav = ({visibility, unActive}) => {
     `;
 
     const StyledLink = styled(Link)`
-    color: #000000;
+    color: #1a1a1a;
     font-size: 40px;
     margin: 20px;
     

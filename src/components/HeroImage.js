@@ -1,5 +1,6 @@
-import React from 'react';
+import React, {useEffect, useRef} from 'react';
 import styled from "styled-components";
+import {staggerText} from "./animation";
 
 
 import Hero from './../assets/opticalFiber.jpg';
@@ -52,15 +53,22 @@ background-color: ${props => props.backgroundColor};
 margin: 0;
 `;
 
-
-
-
 const HeroImage = () => {
+
+    let TextSub1 = useRef(null);
+    let TextSub2 = useRef(null);
+
+    useEffect(() => {
+
+        staggerText(TextSub1, TextSub2)
+    })
+
+
 
     return (
         <HeroImageStyled>
-            <TextStyle color='#FFFFFF' backgroundColor='transparent'>POZNAJ TECHNOLOGIE WRAZ Z</TextStyle>
-            <SubjectStyled color='#FFFFFF' backgroundColor='#000000'>
+            <TextStyle ref={el => (TextSub1 = el)} color='#FFFFFF' backgroundColor='transparent'>POZNAJ TECHNOLOGIE WRAZ Z</TextStyle>
+            <SubjectStyled ref={el => (TextSub2 = el)} color='#FFFFFF' backgroundColor='#1a1a1a'>
                 GRUPA CODA
             </SubjectStyled>
         </HeroImageStyled>

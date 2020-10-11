@@ -9,7 +9,9 @@ const ContactForm = () => {
     left: 0;
     padding: 0;
     margin: 0;
-    background: #0a0a0a;
+    background-color: #FFFFFF;
+    border-top: 1px solid;
+    border-color: #a5a5a5; 
     
     
     }
@@ -25,17 +27,17 @@ const ContactForm = () => {
     justify-content: center;
     align-items: center;
     
-    color: #FFFFFF;
+    color: #1a1a1a;
     text-align: center;
 `;
 
     const InputStyle = styled.input`
-width 60%;
+width 80%;
 font-size: 15px;
 height: 20px;
 background: transparent;
-color: #FFFFFF;
-border-color: #FFFFFF;
+color: #1a1a1a;
+border-color: #1a1a1a;
 border-style: 40px solid;
 margin: 15px;
 `;
@@ -43,24 +45,23 @@ margin: 15px;
 
     const TextAreaStyle = styled.textarea`
 position: relative;
-width 60%;
+width 80%;
 font-size: 15px;
 min-height: 100px;
 background: transparent;
-color: #FFFFFF;
-border-color: #FFFFFF;
+color: #1a1a1a;
+border-color: #1a1a1a;
 border-size: 40px solid;
 resize: none;
 `;
 
     const SendButtonStyle = styled.button`
 margin: 15px;
-width 60%;
+width 80%;
 border-radius: 25px;
-background-color: transparent;
-background: transparent;
-border-color: #FFFFFF;
-border-size: 30px solid;
+background-color: #1a1a1a;
+border-color: #1a1a1a;
+border-size: 40px solid;
 cursor: pointer;
 font-size: 15px;
 color: #FFFFFF;
@@ -68,7 +69,7 @@ text-align: center;
 `;
 
     const TextStyle = styled.p`
-color: #FFFFFF;
+color: #000000;
 font-weight: light;
 font-size: 15px;
 margin: 30px

@@ -14,7 +14,7 @@ const PartnersListStyled = styled.section`
     padding: 0;
     margin: 0;
     border: none;
-    
+   
      display: flex;
     flex-direction: column;
     justify-content: center;
@@ -28,12 +28,14 @@ const PartnersLogoStyled = styled.img`
     margin: 20px;
     `;
 
+
 const PartnersList = ({items}) => (
+
 
     items.map(({image, id}) => {
         return (
             <PartnersListStyled key={id}>
-                <PartnersLogoStyled src={image}/>
+                <PartnersLogoStyled className='image' src={image}/>
             </PartnersListStyled>
         )
     })
