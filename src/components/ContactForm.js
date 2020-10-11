@@ -79,15 +79,15 @@ margin: 30px
         <ContactFormStyled className="contact">
             <ContactFormInner className="contact__inner" >
                 <InputStyle type="hidden" name="contact__number"/>
-                <label>Name</label>
+                <label>Imię i nazwisko</label>
                 <InputStyle type="text" name="user__name"/>
                 <label>Email</label>
                 <InputStyle type="email" name="user__email"/>
-                <label>Subject</label>
+                <label>Temat</label>
                 <InputStyle type="subject" name="subject"/>
-                <label>Message</label>
+                <label>Wiadomość</label>
                 <TextAreaStyle type="text" name="message"/>
-                <SendButtonStyle >Send</SendButtonStyle>
+                <SendButtonStyle >Wyślij</SendButtonStyle>
                 <TextStyle>
                     Grupa CODA Kamil Rzychoń <br/>
                     Chrobrego 1/1A 41-500 Chorzów
