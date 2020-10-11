@@ -6,6 +6,7 @@ import styled from "styled-components";
 import Home from './pages/home';
 import Contact from "./pages/contact";
 import Services from "./pages/services";
+import ScrollToTop from "./components/ScrollToTop";
 
 import Hamburder from "./components/Hamburger";
 import Logo from "./assets/logo.jpg";
@@ -39,6 +40,7 @@ height: auto;
 
   return (
       <Router>
+          <ScrollToTop>
           <div className="App">
               <NavStyled>
                   <Link to='/'>
@@ -52,6 +54,7 @@ height: auto;
               <Route path="/services" component={Services} />
             </Switch>
           </div>
+          </ScrollToTop>
       </Router>
   );
 }

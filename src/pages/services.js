@@ -5,6 +5,7 @@ import opticalFiner from './../assets/opticalFiber.jpg'
 import PPOZ from './../assets/ppoz.jpg';
 import Kamera from './../assets/kamera.jfif';
 import Domofon from './../assets/domofon.jpg'
+import ContactForm from "../components/ContactForm";
 
 
 const ServicesArr = [
@@ -52,6 +53,7 @@ const Services = () => {
     return (
         <div className='Services'>
             <ServicesList items={ServicesArr}/>
+            <ContactForm/>
         </div>
     )
 }
