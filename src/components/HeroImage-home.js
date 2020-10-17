@@ -16,11 +16,13 @@ background-image: url('${Hero}');
 background-size: cover;
 background-position: 50% 50%;
 overflow: hidden;
+
 display: flex;
 flex-direction: column;
 justify-content: center;
 align-items: center;
 z-index: -1;
+
   &::after {
     content: '';
     background: rgba(0, 0, 0, .4);
@@ -30,6 +32,7 @@ z-index: -1;
     z-index: 1;
     width: 100%;
     height: 100vh;
+    }
 `;
 
 const TextStyle = styled.p`

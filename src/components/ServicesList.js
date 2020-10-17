@@ -4,7 +4,7 @@ import PropTypes from 'prop-types';
 import {Link} from "react-router-dom";
 
 
-const ServicesListStyled = styled.section`
+const ServicesListStyled = styled.div`
 
     position: relative;
     z-index: 1;
@@ -18,7 +18,7 @@ const ServicesListStyled = styled.section`
     border: none;
 `;
 
-const ServicesImageStyled = styled.div`
+const ServicesImageStyled = styled.section`
   position: absolute;
   top: 0;
   left: 0;
@@ -28,18 +28,29 @@ const ServicesImageStyled = styled.div`
   height: 100vh;
 
 background-repeat: no-repeat; 
-background-position: center;
-background-attachment: fixed;       
+background-position: center;      
 webkit-background-size: cover;
 -moz-background-size: cover;
 -o-background-size: cover;
-background-size: cover;  
+background-size: cover; 
     
     
          display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    
+      &::after {
+    content: '';
+    background: rgba(0, 0, 0, .4);
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1;
+    width: 100%;
+    height: 100vh;
+    }
+
     `;
 
 const TextStyle = styled.p`

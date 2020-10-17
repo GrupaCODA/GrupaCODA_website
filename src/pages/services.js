@@ -1,7 +1,7 @@
 import React from 'react';
 import ServicesList from "../components/ServicesList";
 
-import opticalFiner from './../assets/opticalFiber.jpg'
+import opticalFiner from './../assets/fiber-optic-cables.jpg'
 import PPOZ from './../assets/ppoz.jpg';
 import Kamera from './../assets/kamera.jfif';
 import Domofon from './../assets/domofon.jpg'
