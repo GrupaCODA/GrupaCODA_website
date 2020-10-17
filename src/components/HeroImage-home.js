@@ -23,7 +23,7 @@ align-items: center;
 z-index: -1;
   &::after {
     content: '';
-    background: rgba(0, 0, 0, .5);
+    background: rgba(0, 0, 0, .4);
     position: absolute;
     top: 0;
     left: 0;
@@ -53,7 +53,7 @@ background-color: ${props => props.backgroundColor};
 margin: 0;
 `;
 
-const HeroImage = () => {
+const HeroImageHome = () => {
 
     let TextSub1 = useRef(null);
     let TextSub2 = useRef(null);
@@ -75,4 +75,4 @@ const HeroImage = () => {
     )
 }
 
-export default HeroImage;
+export default HeroImageHome;

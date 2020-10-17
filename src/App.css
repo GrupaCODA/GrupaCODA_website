@@ -2,6 +2,9 @@
   box-sizing: border-box;
   font-family: 'Roboto', sans-serif;
 }
+body {
+  backface-visibility: hidden;
+}
 
 .gg-close {
   box-sizing: border-box;

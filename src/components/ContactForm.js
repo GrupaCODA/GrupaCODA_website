@@ -36,10 +36,20 @@ width 80%;
 font-size: 15px;
 height: 20px;
 background: transparent;
-color: #1a1a1a;
-border-color: #1a1a1a;
-border-style: 40px solid;
+color: #000;
+border-color: #000 solid;
+border: none;
+border-bottom: 3px solid;
 margin: 15px;
+text-align: center;
+
+&:focus {
+  outline: none;
+    -webkit-box-shadow: 0 10px 20px -4px rgba(26, 26, 26, .8);
+  -moz-box-shadow: 0 10px 20px -4px rgba(26, 26, 26, .8);
+  box-shadow: 0 10px 20px -4px rgba(26, 26, 26, .8);
+  box-shadow: 0 10px 15px -4px rgba(0, 0, 0, .8);
+}
 `;
 
 
@@ -50,14 +60,23 @@ font-size: 15px;
 min-height: 100px;
 background: transparent;
 color: #1a1a1a;
-border-color: #1a1a1a;
-border-size: 40px solid;
+border-color: #000 solid;
+border-size: 3px solid;
 resize: none;
+
+&:focus {
+  outline: none;
+  
+  -webkit-box-shadow: 0 10px 20px -4px rgba(26, 26, 26, .8);
+  -moz-box-shadow: 0 10px 20px -4px rgba(26, 26, 26, .8);
+  box-shadow: 0 10px 20px -4px rgba(26, 26, 26, .8);
+}
 `;
 
     const SendButtonStyle = styled.button`
 margin: 15px;
 width 80%;
+height: 20px;
 border-radius: 25px;
 background-color: #1a1a1a;
 border-color: #1a1a1a;
@@ -65,7 +84,16 @@ border-size: 40px solid;
 cursor: pointer;
 font-size: 15px;
 color: #FFFFFF;
-text-align: center;
+
+display: flex;
+align-items: center;
+justify-content: center;
+
+&:hover, &:focus {
+outline: none;
+background: #FFFFFF;
+color: #1a1a1a;
+}
 `;
 
     const TextStyle = styled.p`

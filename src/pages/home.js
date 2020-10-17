@@ -1,7 +1,7 @@
 import React, {useEffect} from 'react';
 import styled from 'styled-components';
 
-import HeroImage from "../components/HeroImage";
+import HeroImageHome from "../components/HeroImage-home";
 import ContactForm from "../components/ContactForm";
 import MainInfo from "../components/MainInfo";
 import ServicesShort from "../components/ServicesShort";
@@ -73,7 +73,7 @@ const Home = () => {
 
     return (
         <div className='Home'>
-        <HeroImage/>
+        <HeroImageHome/>
         <MainInfo/>
         <ServicesShort/>
         <SubjectStyled>NASI PARTNERZY</SubjectStyled>
