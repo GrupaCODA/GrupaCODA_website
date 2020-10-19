@@ -1,4 +1,4 @@
-import React from 'react';
+import React, {useRef, useEffect} from 'react';
 import './App.css';
 import {BrowserRouter as Router, Route, Switch, Link} from 'react-router-dom';
 import styled from "styled-components";
@@ -10,6 +10,7 @@ import ScrollToTop from "./components/ScrollToTop";
 
 import Hamburder from "./components/Hamburger";
 import Logo from "./assets/logo.jpg";
+import {ChangeBackgroundColor, ChangeTextColor} from "./components/animation";
 
 
 const App = () => {
@@ -30,22 +31,65 @@ const App = () => {
     align-items: center;
     
     
+    @media (min-width: 1024px) {
+    
+    height: 10%;
+    background: transparent;
+    
+    }
     `;
 
     const LogoStyled = styled.img`
 width: 40%;
 height: auto;
 
+@media (min-width: 1024px) {
+
+width: 70%;
+
+}
 `;
+
+    const StyledLink = styled(Link)`
+text-decoration: none;
+opacity: 0;
+
+@media(min-width: 1024px) {
+
+width: 70%; 
+opacity: 1;
+color: #fff;
+font-size: 30px;
+text-transform: uppercase;
+font-weight: 600;
+
+}
+    
+`;
+
+let navBar = useRef(null);
+let {navLink1, navLink2, navLink3} = useRef(null)
+
+    useEffect(() => {
+
+        const sections = document.querySelectorAll('section')
+
+    ChangeBackgroundColor(navBar, sections);
+    ChangeTextColor(navLink1,navLink2,navLink3,sections);
+    })
 
   return (
       <Router>
           <ScrollToTop>
           <div className="App">
-              <NavStyled>
-                  <Link to='/'>
-                  <LogoStyled src={Logo}></LogoStyled>
-                  </Link>
+              <NavStyled ref={el => (navBar = el)}>
+                  <StyledLink to='/'>
+                  <LogoStyled  src={Logo}></LogoStyled>
+                  </StyledLink>
+                  <StyledLink ref={el => (navLink1 = el)} to='/'>Home</StyledLink>
+                  <StyledLink ref={el => (navLink2 = el)} to='services'>Nasze usługi</StyledLink>
+                  <StyledLink ref={el => (navLink3 = el)} to='contact'>Kontakt</StyledLink>
+
                   <Hamburder/>
               </NavStyled>
             <Switch>

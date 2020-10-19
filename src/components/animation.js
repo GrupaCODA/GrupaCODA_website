@@ -36,3 +36,25 @@ export const slideUpText = (node1, node2, node3, node4, node5) => {
             }
         })
 }
+
+export const ChangeTextColor = (node1, node2, node3, trigger) => {
+    gsap.to([node1, node2, node3],
+        {color: '#000',
+            scrollTrigger: {
+                trigger: trigger,
+                start: 'top center',
+                end: 'top center',
+                toggleActions: "play none reverse none",
+            }});
+}
+
+export const ChangeBackgroundColor = (node1,trigger) => {
+    gsap.to(node1,
+        {backgroundColor: '#fff',
+            scrollTrigger: {
+                trigger: trigger,
+                start: 'top center',
+                end: 'top center',
+                toggleActions: "play none reverse none",
+            }});
+}

@@ -36,7 +36,7 @@ z-index: -1;
 `;
 
 const TextStyle = styled.p`
-width: 60%;
+width: 50%;
 padding: 10px;
 z-index: 2;
 color: ${props => props.color};
@@ -44,9 +44,15 @@ font-weight: 500;
 font-size: 30px;
 background-color: ${props => props.backgroundColor};
 margin: 0;
+
+@media (min-width: 768px) {
+
+    font-size: 40px;
+}
+
 `;
 const SubjectStyled = styled.h1`
-width: 60%;
+width: 50%;
 padding: 10px;
 z-index: 2;
 color: ${props => props.color};
@@ -54,6 +60,11 @@ font-weight: 500;
 font-size: 30px;
 background-color: ${props => props.backgroundColor};
 margin: 0;
+
+@media (min-width: 768px) {
+
+    font-size: 40px;
+}
 `;
 
 const HeroImageHome = () => {

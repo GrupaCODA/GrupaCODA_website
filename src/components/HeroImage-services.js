@@ -32,7 +32,7 @@ z-index: 1;
     height: 100vh;
 `;
 
-const SubjectStyled = styled.h1`
+const SubjectStyled = styled.h2`
 width: 60%;
 padding: 10px;
 z-index: 2;
@@ -41,6 +41,11 @@ font-weight: 500;
 font-size: 30px;
 background-color: ${props => props.backgroundColor};
 margin: 0;
+
+@media (min-width: 768px) {
+
+    font-size: 40px;
+}
 `;
 
 const HeroImageService = () => {

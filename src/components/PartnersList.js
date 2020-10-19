@@ -26,6 +26,12 @@ const PartnersLogoStyled = styled.img`
     width: 50%;
     height: auto;
     margin: 20px;
+    
+    @media (min-width: 768px) {
+    
+    width: 50%;
+    
+    }
     `;
 
 

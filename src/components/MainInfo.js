@@ -2,7 +2,7 @@ import React, {useEffect, useRef} from 'react';
 import styled from "styled-components";
 import {slideUpText} from "./animation";
 
-const SectionStyled = styled.div`
+const SectionStyled = styled.section`
 width: 100%;
 height: 100vh;
     margin: 0;
@@ -23,20 +23,38 @@ color: #1a1a1a;
 letter-spacing: 2px;
 font-weight: light;
 font-size: 30px;
-margin: 30px
+margin: 30px;
+
+@media (min-width: 768px) {
+    font-size: 40px;
+    margin: 30px;
+}
 `;
 
 const SubjectStyled = styled.h2`
        
     font-size: 30px;
     color: #1a1a1a;
-    `;
+
+@media (min-width: 768px) {
+
+    font-size: 50px;
+}
+
+`;
+
+
 
 const SvgStyled = styled.svg`
 
 width: 20%;
 height: auto;
 color: #1a1a1a;
+
+@media (min-width: 768px) {
+
+    width: 15%;
+}
 
 `;
 

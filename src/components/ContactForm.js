@@ -45,10 +45,19 @@ text-align: center;
 
 &:focus {
   outline: none;
-    -webkit-box-shadow: 0 10px 20px -4px rgba(26, 26, 26, .8);
+  
+  -webkit-appearance: none;
+  -webkit-box-shadow: 0 10px 20px -4px rgba(26, 26, 26, .8);
   -moz-box-shadow: 0 10px 20px -4px rgba(26, 26, 26, .8);
   box-shadow: 0 10px 20px -4px rgba(26, 26, 26, .8);
-  box-shadow: 0 10px 15px -4px rgba(0, 0, 0, .8);
+}
+
+@media (min-width: 768px) {
+
+
+font-size: 25px;
+height: 30px;
+
 }
 `;
 
@@ -57,7 +66,7 @@ text-align: center;
 position: relative;
 width 80%;
 font-size: 15px;
-min-height: 100px;
+height: 100px;
 background: transparent;
 color: #1a1a1a;
 border-color: #000 solid;
@@ -67,9 +76,16 @@ resize: none;
 &:focus {
   outline: none;
   
+  -webkit-appearance: none;
   -webkit-box-shadow: 0 10px 20px -4px rgba(26, 26, 26, .8);
   -moz-box-shadow: 0 10px 20px -4px rgba(26, 26, 26, .8);
   box-shadow: 0 10px 20px -4px rgba(26, 26, 26, .8);
+}
+
+@media (min-width: 768px) {
+
+font-size: 25px;
+height: 200px;
 }
 `;
 
@@ -94,27 +110,52 @@ outline: none;
 background: #FFFFFF;
 color: #1a1a1a;
 }
+
+@media (min-width: 768px) {
+
+margin: 20px;
+font-size: 25px;
+height: 40px;
+
+}
 `;
 
     const TextStyle = styled.p`
 color: #000000;
 font-weight: light;
 font-size: 15px;
-margin: 30px
+margin: 30px;
+
+@media (min-width: 768px) {
+
+font-size: 25px;
+
+}
 `;
+
+    const LabelStyled = styled.label`
+    
+    
+    @media (min-width: 768px) {
+    
+    font-size: 25px;
+    
+    }
+    
+    `;
 
 
     return (
         <ContactFormStyled className="contact">
             <ContactFormInner className="contact__inner" >
                 <InputStyle type="hidden" name="contact__number"/>
-                <label>Imię i nazwisko</label>
+                <LabelStyled>Imię i nazwisko</LabelStyled>
                 <InputStyle type="text" name="user__name"/>
-                <label>Email</label>
+                <LabelStyled>Email</LabelStyled>
                 <InputStyle type="email" name="user__email"/>
-                <label>Temat</label>
+                <LabelStyled>Temat</LabelStyled>
                 <InputStyle type="subject" name="subject"/>
-                <label>Wiadomość</label>
+                <LabelStyled>Wiadomość</LabelStyled>
                 <TextAreaStyle type="text" name="message"/>
                 <SendButtonStyle >Wyślij</SendButtonStyle>
                 <TextStyle>

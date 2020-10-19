@@ -14,6 +14,12 @@ const Hamburger = () => {
     background-color: transparent;
     border: 0;
     margin-right: 0;
+    
+    @media(min-width: 1024px) {
+    
+    display: none;
+    
+    }
 `;
 
     const HamburgerBoxStyled = styled.span`
@@ -21,6 +27,13 @@ const Hamburger = () => {
     height: 35px;
     display: inline-block;
     position: relative;
+    
+    @media(min-width: 768px) {
+   
+    width: 50px;
+    height: 50px;
+        
+    }
     `;
 
     const HamburgerInnerStyled = styled.span`
@@ -30,7 +43,14 @@ const Hamburger = () => {
     position: absolute;
     right: 0;
     top: 50%;
-    transition: background-color .1s .2s ease-in-out;
+    
+        @media(min-width: 768px) {
+   
+    
+    height: 4px;
+        
+    }
+    
 &::before {
         content: '';
         width: 50%;
@@ -39,8 +59,15 @@ const Hamburger = () => {
         background-color: #1a1a1a;
         right: 0;
         top: -10px;
-        transition: transform .2s .1s ease-in-out;
+    
+    @media(min-width: 768px) {
+    
+        height: 4px;
+        top: -15px;
+        
     }
+    }
+    
 &::after {
         content: '';
         width: 50%;
@@ -49,7 +76,13 @@ const Hamburger = () => {
         background-color: #1a1a1a;
         left: 0;
         top: 10px;
-        transition: transform .2s .1s ease-in-out;
+    
+    @media(min-width: 768px) {
+   
+        top: 15px;
+        height: 4px;
+        
+    }
     }
 `;
     const [isVisible, setIsVisible] = useState({

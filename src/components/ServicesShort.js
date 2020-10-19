@@ -23,6 +23,11 @@ const ServicesShort = () => {
        
     font-size: 30px;
     color: #1a1a1a;
+    
+    @media (min-width: 768px) {
+
+    font-size: 50px;
+}
     `;
 
     const StyledLink = styled(Link)`
@@ -37,12 +42,23 @@ const ServicesShort = () => {
     border-top: 1px solid;
     border-color: #a5a5a5;
     padding: 25px;
-    text-align: center;
     color: #1a1a1a;
     font-size: 25px;
     text-decoration: ${props => props.underline ? 'underline' : 'none'};
     font-weight: 500;
     margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+    
+    @media (min-width: 768px) {
+    height: 120px;
+    font-size: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
 `;
 
     let service1 = useRef(null)

@@ -50,6 +50,13 @@ const PartnersInnerStyled = styled.div`
       display: grid;
       grid-template-columns: 1fr 1fr;
       grid-gap: 15px;
+      
+      @media (min-width: 768px) {
+      
+      grid-template-columns: 1fr 1fr 1fr;
+      grid-gap: 15px;
+      
+      }
     `;
 
 const SubjectStyled = styled.h2`
@@ -60,6 +67,12 @@ const SubjectStyled = styled.h2`
     font-size: 30px;
     color: #1a1a1a;
     text-align: center;
+    
+    @media (min-width: 768px) {
+    
+    font-size: 50px;
+    
+    }
     `;
 
 const Home = () => {

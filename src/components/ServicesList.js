@@ -4,7 +4,7 @@ import PropTypes from 'prop-types';
 import {Link} from "react-router-dom";
 
 
-const ServicesListStyled = styled.div`
+const ServicesListStyled = styled.section`
 
     position: relative;
     z-index: 1;
@@ -18,8 +18,7 @@ const ServicesListStyled = styled.div`
     border: none;
 `;
 
-const ServicesImageStyled = styled.section`
-  position: absolute;
+const ServicesImageStyled = styled.div`
   top: 0;
   left: 0;
   z-index: -1;
@@ -28,7 +27,7 @@ const ServicesImageStyled = styled.section`
   height: 100vh;
 
 background-repeat: no-repeat; 
-background-position: center;      
+background-position: 40% 50%;      
 webkit-background-size: cover;
 -moz-background-size: cover;
 -o-background-size: cover;
@@ -39,18 +38,25 @@ background-size: cover;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    
-      &::after {
+        
+  &::after {
     content: '';
-    background: rgba(0, 0, 0, .4);
+    background: rgba(0, 0, 0, .2);
     position: absolute;
     top: 0;
     left: 0;
-    z-index: -1;
+    z-index: 1;
     width: 100%;
     height: 100vh;
-    }
+   
+}
 
+
+@media (min-width: 1024px) {
+
+background-attachment: fixed;
+
+}
     `;
 
 const TextStyle = styled.p`
@@ -59,14 +65,25 @@ text-align: center;
 font-weight: light;
 font-size: 20px;
 margin: 30px;
-z-index: 1;
+z-index: 2;
+
+
+@media (min-width: 768px) {
+    font-size: 30px;
+}
+
 `;
 
 const SubjectStyled = styled.h2`
        
     font-size: 30px;
     color: #FFFFFF;
-z-index: 1;
+z-index: 2;
+
+@media (min-width: 768px) {
+
+    font-size: 50px;
+}
     `;
 
 const ButtonStyle = styled.button`
@@ -81,7 +98,7 @@ cursor: pointer;
 font-size: 15px;
 color: #FFFFFF;
 text-decoration: none;
-z-index: 1;
+z-index: 2;
 
 display: flex;
 align-items: center;
@@ -92,6 +109,13 @@ outline: none;
 background: #FFFFFF;
 color: #1a1a1a;
 }
+
+@media (min-width: 768px) {
+    margin: 20px;
+    height: 45px;
+    font-size: 30px;
+}
+
 `;
 
 

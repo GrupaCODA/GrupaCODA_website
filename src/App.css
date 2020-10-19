@@ -34,3 +34,19 @@ body {
 .gg-close::after {
   transform: rotate(-45deg)
 }
+
+
+@media (min-width: 768px) {
+
+  .gg-close {
+    width: 45px;
+    height: 45px;
+  }
+
+  .gg-close::after,
+  .gg-close::before {
+    width: 40px;
+    height: 8px;
+  }
+
+}
