@@ -68,6 +68,7 @@ const SvgStyled = styled.svg`
 width: 20%;
 height: auto;
 color: #1a1a1a;
+margin-top: 50px;
 
 @media (min-width: 768px) {
 
@@ -76,17 +77,31 @@ color: #1a1a1a;
 
 @media (min-width: 1024px) {
 
-    opacity: 0;
+    display: none;
 }
 
 `;
 
 const ImageStyled = styled.img`
 
-width 40%;
-margin: 20px;
-opacity: 0;
+width: 100%;
+display: none;
 
+@media (min-width: 1024px) {
+
+    display: inline;
+}
+
+`;const ImageInnerDivStyled = styled.div`
+
+width 50%;
+opacity: 0;
+padding: 30px;
+
+display: flex;
+flex-direction: column;
+justify-content: center;
+align-items: center;
 
 @media (min-width: 1024px) {
 
@@ -132,7 +147,9 @@ const MainInfo = () => {
                 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec quis tellus at urna hendrerit aliquet. Proin vestibulum, sapien id pulvinar luctus
             </TextStyle>
             </TextInnerStyled>
+            <ImageInnerDivStyled>
             <ImageStyled src={InfoImage}/>
+            </ImageInnerDivStyled>
         </SectionStyled>
     )
 }
