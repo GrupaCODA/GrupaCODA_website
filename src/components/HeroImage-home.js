@@ -36,7 +36,7 @@ z-index: -1;
 `;
 
 const TextStyle = styled.p`
-width: 50%;
+width: 80%;
 padding: 10px;
 z-index: 2;
 color: ${props => props.color};
@@ -46,13 +46,14 @@ background-color: ${props => props.backgroundColor};
 margin: 0;
 
 @media (min-width: 768px) {
-
+    
+    width: 50%;
     font-size: 40px;
 }
 
 `;
 const SubjectStyled = styled.h1`
-width: 50%;
+width: 80%;
 padding: 10px;
 z-index: 2;
 color: ${props => props.color};
@@ -62,7 +63,7 @@ background-color: ${props => props.backgroundColor};
 margin: 0;
 
 @media (min-width: 768px) {
-
+    width: 50%;
     font-size: 40px;
 }
 `;

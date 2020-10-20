@@ -40,8 +40,16 @@ const App = () => {
     `;
 
     const LogoStyled = styled.img`
-width: 40%;
+width: 80%;
 height: auto;
+opacity: 1;
+z-index: 1;
+
+@media (min-width: 768px) {
+
+width: 50%;
+
+}
 
 @media (min-width: 1024px) {
 
@@ -53,6 +61,7 @@ width: 70%;
     const StyledLink = styled(Link)`
 text-decoration: none;
 opacity: 0;
+color: #fff;
 
 @media(min-width: 1024px) {
 
@@ -83,9 +92,9 @@ let {navLink1, navLink2, navLink3} = useRef(null)
           <ScrollToTop>
           <div className="App">
               <NavStyled ref={el => (navBar = el)}>
-                  <StyledLink to='/'>
+                  <Link to='/'>
                   <LogoStyled  src={Logo}></LogoStyled>
-                  </StyledLink>
+                  </Link>
                   <StyledLink ref={el => (navLink1 = el)} to='/'>Home</StyledLink>
                   <StyledLink ref={el => (navLink2 = el)} to='services'>Nasze usługi</StyledLink>
                   <StyledLink ref={el => (navLink3 = el)} to='contact'>Kontakt</StyledLink>
