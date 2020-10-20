@@ -42,7 +42,7 @@ const Partners = [
     },
 ]
 
-const PartnersInnerStyled = styled.div`
+const PartnersInnerStyled = styled.section`
           margin-top: 1em;
       justify-items: center;
       margin-bottom: 20px;
@@ -73,14 +73,19 @@ const SubjectStyled = styled.h2`
     font-size: 50px;
     
     }
+    @media (min-width: 1024px) {
+    
+    font-size: 30px;
+    
+    }
     `;
 
 const Home = () => {
 
     useEffect(() => {
-        const section = document.querySelectorAll("section")
+        const sections = document.querySelectorAll("section")
 
-        slideUpText(section)
+        slideUpText(sections)
     })
 
 

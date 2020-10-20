@@ -72,6 +72,11 @@ z-index: 2;
     font-size: 30px;
 }
 
+@media (min-width: 1024px) {
+
+    font-size: 20px;
+
+}
 `;
 
 const SubjectStyled = styled.h2`
@@ -83,6 +88,11 @@ z-index: 2;
 @media (min-width: 768px) {
 
     font-size: 50px;
+}
+
+@media (min-width: 1024px) {
+
+    font-size: 30px;
 }
     `;
 
@@ -116,6 +126,14 @@ color: #1a1a1a;
     font-size: 30px;
 }
 
+@media (min-width: 1024px) {
+    
+    width: 40%;
+    height: auto;
+    margin: 20px;
+    font-size: 20px;
+
+}
 `;
 
 

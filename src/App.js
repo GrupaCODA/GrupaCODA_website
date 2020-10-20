@@ -96,7 +96,7 @@ let {navLink1, navLink2, navLink3} = useRef(null)
                   <LogoStyled  src={Logo}></LogoStyled>
                   </Link>
                   <StyledLink ref={el => (navLink1 = el)} to='/'>Home</StyledLink>
-                  <StyledLink ref={el => (navLink2 = el)} to='services'>Nasze usługi</StyledLink>
+                  <StyledLink ref={el => (navLink2 = el)} to='services'>Nasze<br/>usługi</StyledLink>
                   <StyledLink ref={el => (navLink3 = el)} to='contact'>Kontakt</StyledLink>
 
                   <Hamburder/>

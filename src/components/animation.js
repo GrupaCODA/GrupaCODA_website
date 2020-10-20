@@ -30,7 +30,7 @@ export const slideUpText = (node1, node2, node3, node4, node5) => {
                 amount: .3
             },
             scrollTrigger: {
-                start: 'bootom 130%',
+                start: 'top 185%',
                 trigger: node1,
                 scrub: 1
             }

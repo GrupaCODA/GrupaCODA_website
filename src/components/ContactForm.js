@@ -9,11 +9,10 @@ const ContactForm = () => {
     left: 0;
     padding: 0;
     margin: 0;
-    background-color: #FFFFFF;
+    background-color: transparent;
     border-top: 1px solid;
-    border-color: #a5a5a5; 
-    
-    
+    border-color: #a5a5a5;
+    z-index: 2;
     }
 `;
 
@@ -26,6 +25,7 @@ const ContactForm = () => {
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    z-index: 2;
     
     color: #1a1a1a;
     text-align: center;
@@ -59,6 +59,13 @@ font-size: 25px;
 height: 30px;
 
 }
+
+@media (min-width: 1024px) {
+
+width: 60%;
+font-size: 15px;
+height: 30px;    
+}
 `;
 
 
@@ -67,11 +74,11 @@ position: relative;
 width 80%;
 font-size: 15px;
 height: 100px;
-background: transparent;
 color: #1a1a1a;
 border-color: #000 solid;
 border-size: 3px solid;
 resize: none;
+margin-top: 20px;
 
 &:focus {
   outline: none;
@@ -87,6 +94,14 @@ resize: none;
 font-size: 25px;
 height: 200px;
 }
+
+@media (min-width: 1024px) {
+
+width: 60%;
+font-size: 15px;
+height: 150px;    
+}
+
 `;
 
     const SendButtonStyle = styled.button`
@@ -117,6 +132,13 @@ margin: 20px;
 font-size: 25px;
 height: 40px;
 
+@media (min-width: 1024px) {
+
+width: 20%;
+font-size: 15px;
+height: 20px;    
+}
+
 }
 `;
 
@@ -131,6 +153,12 @@ margin: 30px;
 font-size: 25px;
 
 }
+
+    @media (min-width: 1024px) {
+    
+    font-size: 15px;
+    
+    }
 `;
 
     const LabelStyled = styled.label`
@@ -139,6 +167,12 @@ font-size: 25px;
     @media (min-width: 768px) {
     
     font-size: 25px;
+    
+    }
+    
+    @media (min-width: 1024px) {
+    
+    font-size: 15px;
     
     }
     

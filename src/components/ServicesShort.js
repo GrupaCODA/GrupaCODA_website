@@ -28,6 +28,11 @@ const ServicesShort = () => {
 
     font-size: 50px;
 }
+
+@media (min-width: 1024px) {
+    font-size: 30px;
+   
+}
     `;
 
     const StyledLink = styled(Link)`
@@ -58,6 +63,11 @@ const ServicesShort = () => {
     display: flex;
     justify-content: center;
     align-items: center;
+}
+
+@media (min-width: 1024px) {
+    font-size: 30px;
+   
 }
 `;
 
