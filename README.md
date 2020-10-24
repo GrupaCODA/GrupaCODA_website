@@ -14,18 +14,10 @@ demo: [codagroup.netlify.app](https://codagroup.netlify.app/)
 * gsap version: 3.5.1 (ScrollTrigger) [GreenSock GSAP documentation](https://greensock.com/docs/)
 * styled-components version: 5.2.0 [Styled-components documentation](https://styled-components.com/docs)
 
-## How to run rhe code?
-```
-1. npm
-2. cd symetria_promienista
-3. np start
-```
-
-=======
-## How to run rhe code?
+## How to run the code?
 ```
 1. npm
 2. cd coda
 3. np start
 ```
->>>>>>> 757bd6d... improve contact form
+
