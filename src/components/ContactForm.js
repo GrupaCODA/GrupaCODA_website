@@ -1,5 +1,6 @@
-import React from 'react';
+import React, {useRef} from 'react';
 import styled from 'styled-components';
+import emailjs from 'emailjs-com';
 
 const ContactForm = () => {
 
@@ -178,19 +179,51 @@ font-size: 25px;
     
     `;
 
+    let name = useRef(null)
+    let email = useRef(null)
+    let subject = useRef(null)
+    let message = useRef(null)
+
+
+
+        const sendEmail = (e) => {
+            e.preventDefault()
+
+            const service_id = process.env.REACT_APP_SERVICE_ID;
+            const template_id = process.env.REACT_APP_TEMPLATE_ID;
+            const user_id = process.env.REACT_APP_USER_ID;
+
+
+            emailjs.send(service_id,template_id,{
+                subject: subject.value,
+                name: name.value,
+                email: email.value,
+                message: message.value,
+            },user_id)
+                .then((response) => {
+                    console.log('SUCCESS!', response.status, response.text);
+                }, (err) => {
+                    console.log('FAILED...', err);
+                });
+
+            name.value = ''
+            email.value = ''
+            subject.value = ''
+            message.value = ''
+        }
 
     return (
         <ContactFormStyled className="contact">
-            <ContactFormInner className="contact__inner" >
+            <ContactFormInner className="contact__inner" onSubmit={sendEmail} >
                 <InputStyle type="hidden" name="contact__number"/>
                 <LabelStyled>Imię i nazwisko</LabelStyled>
-                <InputStyle type="text" name="user__name"/>
+                <InputStyle ref={el => (name = el)} type="text" name="user__name"/>
                 <LabelStyled>Email</LabelStyled>
-                <InputStyle type="email" name="user__email"/>
+                <InputStyle ref={el => (email = el)} type="email" name="user__email"/>
                 <LabelStyled>Temat</LabelStyled>
-                <InputStyle type="subject" name="subject"/>
+                <InputStyle ref={el => (subject = el)} type="subject" name="subject"/>
                 <LabelStyled>Wiadomość</LabelStyled>
-                <TextAreaStyle type="text" name="message"/>
+                <TextAreaStyle ref={el => (message = el)} type="text" name="message"/>
                 <SendButtonStyle >Wyślij</SendButtonStyle>
                 <TextStyle>
                     Grupa CODA Kamil Rzychoń <br/>

@@ -1,6 +1,6 @@
 import React, {useEffect, useRef} from 'react';
 import styled from "styled-components";
-import {staggerText} from "./animation";
+import {DisplayBlock, staggerText} from "./animation";
 
 
 import Hero from './../assets/HeroImage-service.jpg';
@@ -33,6 +33,7 @@ z-index: 1;
 `;
 
 const SubjectStyled = styled.h2`
+display: none;
 width: 60%;
 padding: 10px;
 z-index: 2;
@@ -55,6 +56,7 @@ const HeroImageService = () => {
     useEffect(() => {
 
         staggerText(TextSub)
+        DisplayBlock(TextSub)
     })
 
 

@@ -13,6 +13,7 @@ demo: [codagroup.netlify.app](https://codagroup.netlify.app/)
 * Props Types version: 15.7.2 [Props Types documentation](https://github.com/facebook/prop-types)
 * gsap version: 3.5.1 (ScrollTrigger) [GreenSock GSAP documentation](https://greensock.com/docs/)
 * styled-components version: 5.2.0 [Styled-components documentation](https://styled-components.com/docs)
+<<<<<<< HEAD
 
 ## How to run rhe code?
 ```
@@ -21,3 +22,11 @@ demo: [codagroup.netlify.app](https://codagroup.netlify.app/)
 3. np start
 ```
 
+=======
+## How to run rhe code?
+```
+1. npm
+2. cd coda
+3. np start
+```
+>>>>>>> 757bd6d... improve contact form

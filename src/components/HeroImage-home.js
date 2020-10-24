@@ -1,6 +1,6 @@
 import React, {useEffect, useRef} from 'react';
 import styled from "styled-components";
-import {staggerText} from "./animation";
+import {DisplayBlock, staggerText} from "./animation";
 
 
 import Hero from './../assets/opticalFiber.jpg';
@@ -76,6 +76,7 @@ const HeroImageHome = () => {
     useEffect(() => {
 
         staggerText(TextSub1, TextSub2)
+        DisplayBlock(TextSub1, TextSub2)
     })
 
 

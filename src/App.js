@@ -76,6 +76,7 @@ font-weight: 600;
     
 `;
 
+
 let navBar = useRef(null);
 let {navLink1, navLink2, navLink3} = useRef(null)
 
@@ -101,12 +102,12 @@ let {navLink1, navLink2, navLink3} = useRef(null)
 
                   <Hamburder/>
               </NavStyled>
-            <Switch>
-              <Route  path="/" exact component={Home} />
-              <Route path="/contact" component={Contact} />
-              <Route path="/services" component={Services} />
-            </Switch>
-          </div>
+                    <Switch>
+                        <Route  path="/" exact component={Home} />
+                        <Route path="/contact" component={Contact} />
+                        <Route path="/services" component={Services} />
+                    </Switch>
+              </div>
           </ScrollToTop>
       </Router>
   );
