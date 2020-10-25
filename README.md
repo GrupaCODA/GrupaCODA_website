@@ -6,7 +6,7 @@ This project perform services of company.
 
 demo: [codagroup.netlify.app](https://codagroup.netlify.app/)
 ## Used technologies
-### Porject is created with:
+### Project is created with:
 * React version: 16.13.1 [React documentation](https://reactjs.org/docs/getting-started.html)
 * Create-react-app
 * React router dom version: 5.2.0 [React router documentation](https://reactrouter.com/web/guides/quick-start)
