@@ -6,8 +6,9 @@ import styled from "styled-components";
 import Home from './pages/home';
 import Contact from "./pages/contact";
 import Services from "./pages/services";
-import ScrollToTop from "./components/ScrollToTop";
+import PageNotFind from "./pages/404";
 
+import ScrollToTop from "./components/ScrollToTop";
 import Hamburder from "./components/Hamburger";
 import Logo from "./assets/logo.jpg";
 import {ChangeBackgroundColor, ChangeTextColor} from "./components/animation";
@@ -103,9 +104,10 @@ let {navLink1, navLink2, navLink3} = useRef(null)
                   <Hamburder/>
               </NavStyled>
                     <Switch>
-                        <Route  path="/" exact component={Home} />
-                        <Route path="/contact" component={Contact} />
-                        <Route path="/services" component={Services} />
+                        <Route exact  path="/" component={Home} />
+                        <Route exact path="/contact" component={Contact} />
+                        <Route exact path="/services" component={Services} />
+                        <Route component={PageNotFind}/>
                     </Switch>
               </div>
           </ScrollToTop>
