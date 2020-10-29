@@ -33,7 +33,7 @@ const ContactForm = () => {
 `;
 
     const InputStyle = styled.input`
-width 80%;
+width: 80%;
 font-size: 15px;
 height: 20px;
 background: transparent;
@@ -72,7 +72,7 @@ height: 30px;
 
     const TextAreaStyle = styled.textarea`
 position: relative;
-width 80%;
+width: 80%;
 font-size: 15px;
 height: 100px;
 color: #1a1a1a;
@@ -107,7 +107,7 @@ height: 150px;
 
     const SendButtonStyle = styled.button`
 margin: 15px;
-width 80%;
+width: 80%;
 height: 20px;
 border-radius: 25px;
 background-color: #1a1a1a;
@@ -226,7 +226,7 @@ font-size: 25px;
                 <TextAreaStyle ref={el => (message = el)} type="text" name="message"/>
                 <SendButtonStyle >Wyślij</SendButtonStyle>
                 <TextStyle>
-                    Grupa CODA Kamil Rzychoń <br/>
+                    Grupa CODA <br/>
                     Chrobrego 1/1A 41-500 Chorzów
                 </TextStyle>
             </ContactFormInner>
