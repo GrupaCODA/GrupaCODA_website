@@ -23,7 +23,7 @@ align-items: center;
 z-index: 1;
   &::after {
     content: '';
-    background: rgba(0, 0, 0, .3);
+    background: rgba(0, 0, 0, .2);
     position: absolute;
     top: 0;
     left: 0;
@@ -34,7 +34,7 @@ z-index: 1;
 
 const SubjectStyled = styled.h2`
 display: none;
-width: 60%;
+
 padding: 10px;
 z-index: 2;
 color: ${props => props.color};

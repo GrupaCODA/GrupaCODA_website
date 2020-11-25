@@ -52,6 +52,7 @@ const ServicesShort = () => {
     text-decoration: ${props => props.underline ? 'underline' : 'none'};
     font-weight: 500;
     margin: 0;
+    text-align: center;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -71,25 +72,30 @@ const ServicesShort = () => {
 }
 `;
 
-    let service1 = useRef(null)
-    let service2 = useRef(null)
-    let service3 = useRef(null)
-    let service4 = useRef(null)
-    let service5 = useRef(null)
+    let {
+        service1,
+        service2,
+        service3,
+        service4,
+        service5,
+        service6
+    }  = useRef(null)
+
 
     useEffect(() => {
-        slideUpText(service1, service2, service3, service4, service5)
+        slideUpText(service1, service2, service3, service4, service5, service6)
     })
 
     return (
         <StyledLink to='/services'>
         <ServicesDivStyled>
             <SubjectStyled>NASZE USŁUGI</SubjectStyled>
-            <TextStyle ref={el => (service1 = el)}>Sieci światłowodowe</TextStyle>
-            <TextStyle ref={el => (service2 = el)}>Monitoring</TextStyle>
-            <TextStyle ref={el => (service3 = el)}>PPOŻ.</TextStyle>
-            <TextStyle ref={el => (service4 = el)}>Domofony</TextStyle>
-            <TextStyle ref={el => (service5 = el)} underline>Zobacz więcej</TextStyle>
+            <TextStyle ref={el => (service1 = el)}>Monitoring</TextStyle>
+            <TextStyle ref={el => (service2 = el)}>Domofony</TextStyle>
+            <TextStyle ref={el => (service3 = el)}>Sieci światłowodowe</TextStyle>
+            <TextStyle ref={el => (service4 = el)}>Projektowanie sieci telekomunikacynych</TextStyle>
+            <TextStyle ref={el => (service5 = el)}>Intsalacje elektryczne i teletechniczne</TextStyle>
+            <TextStyle ref={el => (service6 = el)} underline>Zobacz więcej</TextStyle>
         </ServicesDivStyled>
         </StyledLink>
 )

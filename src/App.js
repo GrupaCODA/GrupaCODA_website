@@ -11,7 +11,7 @@ import PageNotFind from "./pages/404";
 import ScrollToTop from "./components/ScrollToTop";
 import Hamburder from "./components/Hamburger";
 import Logo from "./assets/logo.jpg";
-import {ChangeBackgroundColor, ChangeTextColor} from "./components/animation";
+import {ChangeBackgroundColor} from "./components/animation";
 
 
 const App = () => {
@@ -68,7 +68,7 @@ color: #fff;
 
 width: 70%; 
 opacity: 1;
-color: #fff;
+color: #000;
 font-size: 30px;
 text-transform: uppercase;
 font-weight: 600;
@@ -79,14 +79,12 @@ font-weight: 600;
 
 
 let navBar = useRef(null);
-let {navLink1, navLink2, navLink3} = useRef(null)
 
     useEffect(() => {
 
         const sections = document.querySelectorAll('section')
 
     ChangeBackgroundColor(navBar, sections);
-    ChangeTextColor(navLink1,navLink2,navLink3,sections);
     })
 
   return (
@@ -97,9 +95,9 @@ let {navLink1, navLink2, navLink3} = useRef(null)
                   <Link to='/'>
                   <LogoStyled  src={Logo}></LogoStyled>
                   </Link>
-                  <StyledLink ref={el => (navLink1 = el)} to='/'>Home</StyledLink>
-                  <StyledLink ref={el => (navLink2 = el)} to='services'>Nasze<br/>usługi</StyledLink>
-                  <StyledLink ref={el => (navLink3 = el)} to='contact'>Kontakt</StyledLink>
+                  <StyledLink to='/'>Home</StyledLink>
+                  <StyledLink to='services'>Nasze<br/>usługi</StyledLink>
+                  <StyledLink to='contact'>Kontakt</StyledLink>
 
                   <Hamburder/>
               </NavStyled>

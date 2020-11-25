@@ -28,11 +28,11 @@ export const DisplayBlock = (node1, node2) => {
         })
 }
 
-export const slideUpText = (node1, node2, node3, node4, node5) => {
+export const slideUpText = (node1, node2, node3, node4, node5, node6, node7) => {
 
     gsap.registerPlugin(ScrollTrigger)
 
-    gsap.from([node1, node2, node3, node4, node5],
+    gsap.from([node1, node2, node3, node4, node5, node6, node7],
         {y: 60,
             opacity: 0,
             duration: 1,
@@ -49,24 +49,13 @@ export const slideUpText = (node1, node2, node3, node4, node5) => {
         })
 }
 
-export const ChangeTextColor = (node1, node2, node3, trigger) => {
-    gsap.to([node1, node2, node3],
-        {color: '#000',
-            scrollTrigger: {
-                trigger: trigger,
-                start: 'top center',
-                end: 'top center',
-                toggleActions: "play none reverse none",
-            }});
-}
-
 export const ChangeBackgroundColor = (node1,trigger) => {
     gsap.to(node1,
         {backgroundColor: '#fff',
             scrollTrigger: {
                 trigger: trigger,
-                start: 'top center',
-                end: 'top center',
+                start: 'top 90%',
+                end: 'top 90%',
                 toggleActions: "play none reverse none",
             }});
 }

@@ -25,7 +25,7 @@ z-index: -1;
 
   &::after {
     content: '';
-    background: rgba(0, 0, 0, .4);
+    background: rgba(0, 0, 0, .2);
     position: absolute;
     top: 0;
     left: 0;
@@ -36,7 +36,7 @@ z-index: -1;
 `;
 
 const TextStyle = styled.p`
-width: 80%;
+text-align: center;
 padding: 10px;
 z-index: 2;
 color: ${props => props.color};
@@ -46,14 +46,13 @@ background-color: ${props => props.backgroundColor};
 margin: 0;
 
 @media (min-width: 768px) {
-    
-    width: 50%;
+
     font-size: 40px;
 }
 
 `;
 const SubjectStyled = styled.h1`
-width: 80%;
+
 padding: 10px;
 z-index: 2;
 color: ${props => props.color};
@@ -63,7 +62,7 @@ background-color: ${props => props.backgroundColor};
 margin: 0;
 
 @media (min-width: 768px) {
-    width: 50%;
+
     font-size: 40px;
 }
 `;

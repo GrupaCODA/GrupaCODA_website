@@ -9,12 +9,12 @@ const ContactForm = () => {
     top: 0;
     left: 0;
     padding: 0;
-    margin: 0;
+
+    margin-top: 100px;
     background-color: transparent;
-    border-top: 1px solid;
-    border-color: #a5a5a5;
+
     z-index: 2;
-    }
+    
 `;
 
     const ContactFormInner = styled.form`
@@ -27,6 +27,7 @@ const ContactForm = () => {
     justify-content: center;
     align-items: center;
     z-index: 2;
+
     
     color: #1a1a1a;
     text-align: center;
@@ -37,10 +38,9 @@ width: 80%;
 font-size: 15px;
 height: 20px;
 background: transparent;
-color: #000;
-border-color: #000 solid;
+color: #1a1a1a;
 border: none;
-border-bottom: 3px solid;
+border-bottom: 3px solid #1a1a1a;
 margin: 15px;
 text-align: center;
 
@@ -76,8 +76,7 @@ width: 80%;
 font-size: 15px;
 height: 100px;
 color: #1a1a1a;
-border-color: #000 solid;
-border-size: 3px solid;
+border: 3px solid #1a1a1a;
 resize: none;
 margin-top: 20px;
 
@@ -111,8 +110,7 @@ width: 80%;
 height: 20px;
 border-radius: 25px;
 background-color: #1a1a1a;
-border-color: #1a1a1a;
-border-size: 40px solid;
+border: 2px solid #1a1a1a;
 cursor: pointer;
 font-size: 15px;
 color: #FFFFFF;
@@ -145,9 +143,9 @@ height: 20px;
 
     const TextStyle = styled.p`
 color: #000000;
-font-weight: light;
+font-weight: 700;
 font-size: 15px;
-margin: 30px;
+
 
 @media (min-width: 768px) {
 
@@ -178,6 +176,25 @@ font-size: 25px;
     }
     
     `;
+    const AnchorStyle = styled.a`
+  color: #000000;
+  
+      @media (min-width: 1024px) {
+    
+    font-size: 15px;
+    
+    }
+`
+
+    const FooterStyle = styled.footer`
+    margin-bottom: 50px;
+
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+`
 
     let name = useRef(null)
     let email = useRef(null)
@@ -226,9 +243,34 @@ font-size: 25px;
                 <TextAreaStyle ref={el => (message = el)} type="text" name="message"/>
                 <SendButtonStyle >Wyślij</SendButtonStyle>
                 <TextStyle>
-                    Grupa CODA <br/>
-                    Chrobrego 1/1A 41-500 Chorzów
+                    Grupa CODA
                 </TextStyle>
+                <FooterStyle>
+                    <div>
+                        <TextStyle>
+                            Kontakt biuro
+                        </TextStyle>
+                        <AnchorStyle href="tel: +48-518-781-784">
+                            +48 518 781 784
+                        </AnchorStyle>
+                    </div>
+                    <div>
+                        <TextStyle>
+                            Lokalizacja
+                        </TextStyle>
+                        <AnchorStyle href="https://goo.gl/maps/PMVvwoWLMDrrE84EA">
+                            Chrobrego 1/1A 41-500 Chorzów
+                        </AnchorStyle>
+                    </div>
+                    <div>
+                        <TextStyle>
+                            NIP
+                        </TextStyle>
+                        <AnchorStyle>
+                            643 176 13 62
+                        </AnchorStyle>
+                    </div>
+                </FooterStyle>
             </ContactFormInner>
         </ContactFormStyled>
 
