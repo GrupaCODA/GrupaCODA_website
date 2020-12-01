@@ -68,7 +68,7 @@ color: #fff;
 
 width: 70%; 
 opacity: 1;
-color: #000;
+color: #c4c4c4;
 font-size: 30px;
 text-transform: uppercase;
 font-weight: 600;
