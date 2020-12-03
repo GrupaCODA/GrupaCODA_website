@@ -96,7 +96,7 @@ let navBar = useRef(null);
                   <LogoStyled  src={Logo}></LogoStyled>
                   </Link>
                   <StyledLink to='/'>Home</StyledLink>
-                  <StyledLink to='services'>Nasze<br/>usługi</StyledLink>
+                  <StyledLink to='services'>Usługi</StyledLink>
                   <StyledLink to='contact'>Kontakt</StyledLink>
 
                   <Hamburder/>
