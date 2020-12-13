@@ -144,7 +144,8 @@ const MainInfo = () => {
             <TextInnerStyled>
             <SubjectStyled ref={el => (subject = el)}>O NAS</SubjectStyled>
             <TextStyle ref={el => (textInner = el)}>
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec quis tellus at urna hendrerit aliquet. Proin vestibulum, sapien id pulvinar luctus
+                Profesjonalizm w każdym aspekcie naszego działania <br/>
+                Podłączenia sieciowe oraz elektryczne, monitoring i  usługi projektowe dla Ciebie w zasięgu jednego kliknięcia
             </TextStyle>
             </TextInnerStyled>
             <ImageInnerDivStyled>
