@@ -29,8 +29,8 @@ const TextStyle = styled.p`
 z-index: 2;
 color: #1a1a1a;
 letter-spacing: 2px;
-font-weight: light;
-font-size: 30px;
+font-weight: 700;
+font-size: 25px;
 margin: 30px;
 
 @media (min-width: 768px) {
@@ -94,7 +94,7 @@ display: none;
 
 `;const ImageInnerDivStyled = styled.div`
 
-width 50%;
+width: 50%;
 opacity: 0;
 padding: 30px;
 
@@ -111,7 +111,7 @@ align-items: center;
 `;
 
 const TextInnerStyled = styled.div`
-
+    height: 100%;
     display: flex;
     flex-direction: column;
     justify-content: center;
