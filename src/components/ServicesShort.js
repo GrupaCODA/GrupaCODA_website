@@ -94,7 +94,7 @@ const ServicesShort = () => {
             <TextStyle ref={el => (service2 = el)}>Domofony</TextStyle>
             <TextStyle ref={el => (service3 = el)}>Sieci światłowodowe</TextStyle>
             <TextStyle ref={el => (service4 = el)}>Projektowanie sieci telekomunikacynych</TextStyle>
-            <TextStyle ref={el => (service5 = el)}>Intsalacje elektryczne i teletechniczne</TextStyle>
+            <TextStyle ref={el => (service5 = el)}>Istalacje elektryczne i teletechniczne</TextStyle>
             <TextStyle ref={el => (service6 = el)} underline>Zobacz więcej</TextStyle>
         </ServicesDivStyled>
         </StyledLink>

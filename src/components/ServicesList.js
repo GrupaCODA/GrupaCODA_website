@@ -140,11 +140,11 @@ color: #1a1a1a;
 
 const ServicesList = ({items}) => (
 
-    items.map(({image, id, name, description}) => {
+    items.map(({image, id, name, description, alt}) => {
 
         return (
             <ServicesListStyled key={id}>
-                <ServicesImageStyled className='bg' background={image}>
+                <ServicesImageStyled className='bg' background={image} title={alt}>
                     <SubjectStyled>{name}</SubjectStyled>
                     <TextStyle>{description}</TextStyle>
                     <ButtonStyle as={Link} to='contact'>Zapytaj o wycenę</ButtonStyle>
