@@ -81,7 +81,7 @@ z-index: 2;
 `;
 
 const SubjectStyled = styled.h2`
-       
+       text-align: center;
     font-size: 30px;
     color: #FFFFFF;
 z-index: 2;
