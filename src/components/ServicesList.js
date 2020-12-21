@@ -41,7 +41,7 @@ background-size: cover;
         
   &::after {
     content: '';
-    background: rgba(0, 0, 0, .2);
+    background: rgba(0, 0, 0, .3);
     position: absolute;
     top: 0;
     left: 0;
@@ -62,11 +62,11 @@ background-attachment: fixed;
 const TextStyle = styled.p`
 color: #FFFFFF;
 text-align: center;
-font-weight: light;
+font-weight: 400;
 font-size: 20px;
 margin: 30px;
 z-index: 2;
-
+text-align: left;
 
 @media (min-width: 768px) {
     font-size: 30px;
