@@ -18,6 +18,6 @@ demo: [codagroup.netlify.app](https://codagroup.netlify.app/)
 ```
 1. npm
 2. cd coda
-3. np start
+3. npm start
 ```
 
