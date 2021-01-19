@@ -10,7 +10,7 @@ const Contact = () => {
 
     @media (min-width: 1024px) {
       width: 100%;
-      height: auto;
+      height: 100vh;
       top: 0;
       left: 0;
       z-index: -2;

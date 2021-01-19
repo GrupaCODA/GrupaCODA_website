@@ -19,6 +19,7 @@ const ContactForm = () => {
       align-items: center;
 
       @media (min-width: 1024px) {
+        margin-top: 100px;
         flex-direction: row-reverse;  
         justify-content: space-around;
         align-items: center;
