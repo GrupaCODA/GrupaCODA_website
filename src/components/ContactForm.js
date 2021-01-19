@@ -10,10 +10,19 @@ const ContactForm = () => {
     left: 0;
     padding: 0;
 
-    margin-top: 100px;
     background-color: transparent;
 
     z-index: 2;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+
+      @media (min-width: 1024px) {
+        flex-direction: row-reverse;  
+        justify-content: space-around;
+        align-items: center;
+      }
     
 `;
 
@@ -21,7 +30,7 @@ const ContactForm = () => {
     position: relative;
     overflow: hidden;
     width: 100%;
-    height: 100vh;
+    height: 80vh;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -31,6 +40,10 @@ const ContactForm = () => {
     
     color: #1a1a1a;
     text-align: center;
+
+      @media (min-width: 1024px) {
+        width: 65%;
+      }
 `;
 
     const InputStyle = styled.input`
@@ -142,9 +155,11 @@ height: 20px;
 `;
 
     const TextStyle = styled.p`
+      
 color: #000000;
 font-weight: 700;
 font-size: 15px;
+      text-align: center;
 
 
 @media (min-width: 768px) {
@@ -194,6 +209,10 @@ font-size: 25px;
     flex-direction: column;
     justify-content: center;
     align-items: center;
+
+      @media (min-width: 1024px) {
+        width: 30%;
+      }
 `
 
     let name = useRef(null)
@@ -242,11 +261,12 @@ font-size: 25px;
                 <LabelStyled>Wiadomość</LabelStyled>
                 <TextAreaStyle ref={el => (message = el)} type="text" name="message"/>
                 <SendButtonStyle >Wyślij</SendButtonStyle>
-                <TextStyle>
-                    Grupa CODA
-                </TextStyle>
+            </ContactFormInner>
                 <FooterStyle>
                     <div>
+                        <TextStyle>
+                            Grupa CODA
+                        </TextStyle>
                         <TextStyle>
                             Kontakt biuro
                         </TextStyle>
@@ -271,7 +291,7 @@ font-size: 25px;
                         </AnchorStyle>
                     </div>
                 </FooterStyle>
-            </ContactFormInner>
+
         </ContactFormStyled>
 
     )

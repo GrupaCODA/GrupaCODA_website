@@ -15,7 +15,7 @@ const RouterNav = ({visibility, unActive}) => {
     right: 0;
     left: 0;
     bottom: 0;
-    background: #FFFFFF;
+    background: #abffd6;
 
     `;
 
@@ -25,7 +25,8 @@ const RouterNav = ({visibility, unActive}) => {
     display: flex;
     flex-direction: column;
     justify-content: center;
-    align-items: center; 
+    align-items: center;
+      
     `;
 
     const CloseButtonStyled = styled.button`

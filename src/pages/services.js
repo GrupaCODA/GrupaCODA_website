@@ -45,22 +45,21 @@ const ServicesArr = [
         name: 'Projektowanie sieci teletechnicznych',
         image: Plans,
         alt: 'Obraz anncapictures z Pixabay ',
-        description: 'Jest to dziedzina, w której możemy pochwalić ' +
-            'się największym doświadczeniem. Wszyscy nasi klienci' +
-            ' zaufali naszej jakości pracy. Ty również możesz' +
-            ' nam zaufać i powierzyć nam stworzenie ' +
-            'własnej sieci lokalnej już dziś.'
+        description: 'Jakość wykonania naszych projektów obiera się na estetycznym' +
+            ' oraz dokładnym wykończeniu. Jedną z części składowych naszej precysji ' +
+            'jest profesjonalne wykonanie projektów pod nasze usługi. Jeśli potrzebujesz' +
+            ' dobrze skonstrułowanego projektu wykonawczego to trafiłeś idealnie. ' +
+            'Doświadczenie pozwoliło nam dojść do precyzji w tej dziedzinie.'
     },
     {
         id: 4,
         name: 'Instalacje elektryczne i teletechniczne',
         image: Electrical,
-        alt: 'Obraz Harry Strauss z Pixabay ',
-        description: 'Jest to dziedzina, w której możemy pochwalić ' +
-            'się największym doświadczeniem. Wszyscy nasi klienci' +
-            ' zaufali naszej jakości pracy. Ty również możesz' +
-            ' nam zaufać i powierzyć nam stworzenie ' +
-            'własnej sieci lokalnej już dziś.'
+        alt: 'Obraz Harry Strauss z Pixabay',
+        description: 'Z wielką dokładnością i precyzją wykonujemy okablowanie elektryczne oraz' +
+            ' teletechniczne sieci, którą możemy zbudować dla ciebie. Wszystko zgodne ' +
+            'ze sztuką budowlaną, oraz spełnienem oczekiwań wszystkich klientów z którymi' +
+            ' mieliśmy przyjemność współpracować.'
     },
 ]
 
