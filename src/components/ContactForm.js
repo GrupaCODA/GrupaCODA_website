@@ -279,8 +279,8 @@ font-size: 25px;
                         <TextStyle>
                             Lokalizacja
                         </TextStyle>
-                        <AnchorStyle href="https://goo.gl/maps/PMVvwoWLMDrrE84EA">
-                            Chrobrego 1/1A 41-500 Chorzów
+                        <AnchorStyle href="https://goo.gl/maps/YKHxmwmDdYnnntuK6">
+                            Lwowska 34 41-500 Chorzów
                         </AnchorStyle>
                     </div>
                     <div>
