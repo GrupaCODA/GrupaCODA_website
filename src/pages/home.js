@@ -1,4 +1,4 @@
-import React, {useEffect} from 'react';
+import React from 'react';
 import styled from 'styled-components';
 
 import HeroImageHome from "../components/HeroImage-home";
@@ -13,7 +13,6 @@ import OrangeLogo from '../assets/orange logo.png';
 import KauflandLogo from '../assets/Kaufland logo.png';
 import KoalaLogo from '../assets/koala logo.jpg';
 import ImpresjaLogo from '../assets/impresjanet logo.png';
-import {slideUpText} from "../components/animation";
 
 const Partners = [
     {
@@ -81,12 +80,6 @@ const SubjectStyled = styled.h2`
     `;
 
 const Home = () => {
-
-    useEffect(() => {
-        const sections = document.querySelectorAll("section")
-
-        slideUpText(sections)
-    })
 
 
     return (

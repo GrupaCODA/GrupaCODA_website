@@ -15,7 +15,6 @@ padding: 0;
 background-image: url('${Hero}');
 background-size: cover;
 background-position: 50% 50%;
-overflow: hidden;
 
 display: flex;
 flex-direction: column;

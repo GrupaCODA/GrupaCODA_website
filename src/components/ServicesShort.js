@@ -1,7 +1,6 @@
-import React, {useEffect, useRef} from 'react';
+import React from 'react';
 import styled from 'styled-components';
 import {Link} from "react-router-dom";
-import {slideUpText} from "./animation";
 
 const ServicesShort = () => {
 
@@ -72,30 +71,18 @@ const ServicesShort = () => {
 }
 `;
 
-    let {
-        service1,
-        service2,
-        service3,
-        service4,
-        service5,
-        service6
-    }  = useRef(null)
-
-
-    useEffect(() => {
-        slideUpText(service1, service2, service3, service4, service5, service6)
-    })
+    
 
     return (
         <StyledLink to='/services'>
         <ServicesDivStyled>
             <SubjectStyled>NASZE USŁUGI</SubjectStyled>
-            <TextStyle ref={el => (service1 = el)}>Monitoring</TextStyle>
-            <TextStyle ref={el => (service2 = el)}>Domofony</TextStyle>
-            <TextStyle ref={el => (service3 = el)}>Sieci światłowodowe</TextStyle>
-            <TextStyle ref={el => (service4 = el)}>Projektowanie sieci telekomunikacynych</TextStyle>
-            <TextStyle ref={el => (service5 = el)}>Istalacje elektryczne i teletechniczne</TextStyle>
-            <TextStyle ref={el => (service6 = el)} underline>Zobacz więcej</TextStyle>
+            <TextStyle>Monitoring</TextStyle>
+            <TextStyle>Domofony</TextStyle>
+            <TextStyle>Sieci światłowodowe</TextStyle>
+            <TextStyle>Projektowanie sieci telekomunikacynych</TextStyle>
+            <TextStyle>Istalacje elektryczne i teletechniczne</TextStyle>
+            <TextStyle underline>Zobacz więcej</TextStyle>
         </ServicesDivStyled>
         </StyledLink>
 )

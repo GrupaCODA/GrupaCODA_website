@@ -1,6 +1,5 @@
-import React, {useEffect, useRef} from 'react';
+import React from 'react';
 import styled from "styled-components";
-import {slideUpText} from "./animation";
 
 import InfoImage from '../assets/infoImage.jpg'
 
@@ -128,22 +127,16 @@ width: 50%;
 
 const MainInfo = () => {
 
-    let image = useRef(null)
-    let subject = useRef(null)
-    let textInner = useRef(null)
-
-    useEffect(() => {
-        slideUpText(image, subject, textInner)
-    })
+ 
 
     return (
         <SectionStyled>
-            <SvgStyled ref={el => (image = el)} xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <SvgStyled  xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z" />
             </SvgStyled>
             <TextInnerStyled>
-            <SubjectStyled ref={el => (subject = el)}>O NAS</SubjectStyled>
-            <TextStyle ref={el => (textInner = el)}>
+            <SubjectStyled >O NAS</SubjectStyled>
+            <TextStyle >
                 Profesjonalizm w każdym aspekcie naszego działania <br/>
                 Podłączenia sieciowe oraz elektryczne, monitoring i  usługi projektowe dla Ciebie w zasięgu jednego kliknięcia
             </TextStyle>
