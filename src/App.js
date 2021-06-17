@@ -1,4 +1,4 @@
-import React, {useRef, useEffect, useState} from 'react';
+import React, {useEffect, useState} from 'react';
 import './App.css';
 import {BrowserRouter as Router, Route, Switch, Link} from 'react-router-dom';
 import styled from "styled-components";
@@ -12,7 +12,6 @@ import ScrollToTop from "./components/ScrollToTop";
 import Hamburder from "./components/Hamburger";
 import LogoWhite from "./assets/Coda Group_Logotyp-05.png";
 import LogoBlack from "./assets/Coda Group_Logotyp-06.png";
-import {ChangeBackgroundColor} from "./components/animation";
 
 
 const App = () => {
@@ -26,7 +25,7 @@ const App = () => {
     top: 0;
     left: 0;
     z-index: 999;
-    background: transparent;
+    background: ${props => props.colors ? `#fff` : `transparent`};
     display: flex;
     flex-direction: row;
     justify-content: space-between;
@@ -36,7 +35,6 @@ const App = () => {
     @media (min-width: 1024px) {
     
     height: 10%;
-    background: transparent;
     
     }
     `;
@@ -79,15 +77,11 @@ font-weight: 600;
 `;
 
 
-let navBar = useRef(null);
 const [isChange, setIsChange] = useState(false);
     useEffect(() => {
 
-        const sections = document.querySelectorAll('section')
-        //const helper = window.scrollY + document.getElementById('hero').getBoundingClientRect().top 
         const helper = 120;
 
-        ChangeBackgroundColor(navBar, sections);
 
         window.addEventListener('scroll', () => {
             let LazyStarter = window.scrollY + 100;
@@ -97,13 +91,14 @@ const [isChange, setIsChange] = useState(false);
                     setIsChange(false)
                 }
         })
+
     })
 
   return (
       <Router>
           <ScrollToTop>
           <div className="App">
-              <NavStyled ref={el => (navBar = el)}>
+              <NavStyled colors={isChange}>
                   <Link to='/'>
                   <LogoStyled  src={isChange === false ? (LogoWhite):(LogoBlack)}></LogoStyled>
                   </Link>
