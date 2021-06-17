@@ -81,7 +81,7 @@ const HeroImageHome = () => {
 
 
     return (
-        <HeroImageStyled>
+        <HeroImageStyled id='hero'>
             <TextStyle ref={el => (TextSub1 = el)} color='#FFFFFF' backgroundColor='transparent'>POZNAJ TECHNOLOGIE RAZEM Z</TextStyle>
             <SubjectStyled ref={el => (TextSub2 = el)} color='#FFFFFF' backgroundColor='#1a1a1a'>
                 GRUPA CODA

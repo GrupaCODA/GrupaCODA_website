@@ -30,7 +30,8 @@ z-index: 1;
     z-index: 1;
     width: 100%;
     height: 100vh;
-`;
+  }
+`
 
 const SubjectStyled = styled.h2`
 display: none;
@@ -62,7 +63,7 @@ const HeroImageService = () => {
 
 
     return (
-        <HeroImageStyled>
+        <HeroImageStyled id='hero'>
             <SubjectStyled ref={el => (TextSub = el)} color='#FFFFFF' backgroundColor='#1a1a1a'>
                 NASZE USŁUGI
             </SubjectStyled>

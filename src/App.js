@@ -1,4 +1,4 @@
-import React, {useRef, useEffect} from 'react';
+import React, {useRef, useEffect, useState} from 'react';
 import './App.css';
 import {BrowserRouter as Router, Route, Switch, Link} from 'react-router-dom';
 import styled from "styled-components";
@@ -10,7 +10,8 @@ import PageNotFind from "./pages/404";
 
 import ScrollToTop from "./components/ScrollToTop";
 import Hamburder from "./components/Hamburger";
-import Logo from "./assets/logo.jpg";
+import LogoWhite from "./assets/Coda Group_Logotyp-05.png";
+import LogoBlack from "./assets/Coda Group_Logotyp-06.png";
 import {ChangeBackgroundColor} from "./components/animation";
 
 
@@ -54,7 +55,7 @@ width: 50%;
 
 @media (min-width: 1024px) {
 
-width: 70%;
+width: 40%;
 
 }
 `;
@@ -79,12 +80,23 @@ font-weight: 600;
 
 
 let navBar = useRef(null);
-
+const [isChange, setIsChange] = useState(false);
     useEffect(() => {
 
         const sections = document.querySelectorAll('section')
+        //const helper = window.scrollY + document.getElementById('hero').getBoundingClientRect().top 
+        const helper = 120;
 
-    ChangeBackgroundColor(navBar, sections);
+        ChangeBackgroundColor(navBar, sections);
+
+        window.addEventListener('scroll', () => {
+            let LazyStarter = window.scrollY + 100;
+                if(LazyStarter >= helper) {
+                    setIsChange(true);
+                } else {
+                    setIsChange(false)
+                }
+        })
     })
 
   return (
@@ -93,13 +105,13 @@ let navBar = useRef(null);
           <div className="App">
               <NavStyled ref={el => (navBar = el)}>
                   <Link to='/'>
-                  <LogoStyled  src={Logo}></LogoStyled>
+                  <LogoStyled  src={isChange === false ? (LogoWhite):(LogoBlack)}></LogoStyled>
                   </Link>
                   <StyledLink to='/'>Home</StyledLink>
                   <StyledLink to='services'>Usługi</StyledLink>
                   <StyledLink to='contact'>Kontakt</StyledLink>
 
-                  <Hamburder/>
+                  <Hamburder colors={isChange}/>
               </NavStyled>
                     <Switch>
                         <Route exact  path="/" component={Home} />

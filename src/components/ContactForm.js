@@ -10,7 +10,7 @@ const ContactForm = () => {
     left: 0;
     padding: 0;
 
-    background-color: transparent;
+    background-color: #a1a1a1;
 
     z-index: 2;
       display: flex;
@@ -20,6 +20,7 @@ const ContactForm = () => {
 
       @media (min-width: 1024px) {
         margin-top: 100px;
+        background-color: transparent;
         flex-direction: row-reverse;  
         justify-content: space-around;
         align-items: center;

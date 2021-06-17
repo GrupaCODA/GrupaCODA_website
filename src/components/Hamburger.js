@@ -4,7 +4,7 @@ import styled from "styled-components";
 import RouterNav from "./RouterNav";
 
 
-const Hamburger = () => {
+const Hamburger = ({colors}) => {
 
     const HamburgerStyled = styled.button`
     padding: 10px;
@@ -39,10 +39,11 @@ const Hamburger = () => {
     const HamburgerInnerStyled = styled.span`
     width: 100%;
     height: 3px;
-    background-color: #1a1a1a;
+    background-color: ${props => props.colors ? `#1a1a1a` : `#fff`};
     position: absolute;
     right: 0;
     top: 50%;
+    border-radius: 25px;
     
         @media(min-width: 768px) {
    
@@ -56,9 +57,11 @@ const Hamburger = () => {
         width: 50%;
         height: 3px;
         position: absolute;
-        background-color: #1a1a1a;
+        background-color: ${props => props.colors ? `#1a1a1a` : `#fff`};
         right: 0;
         top: -10px;
+        border-radius: 25px;
+
     
     @media(min-width: 768px) {
     
@@ -73,9 +76,11 @@ const Hamburger = () => {
         width: 50%;
         height: 3px;
         position: absolute;
-        background-color: #1a1a1a;
+        background-color: ${props => props.colors ? `#1a1a1a` : `#fff`};
         left: 0;
         top: 10px;
+        border-radius: 25px;
+
     
     @media(min-width: 768px) {
    
@@ -110,8 +115,8 @@ const Hamburger = () => {
     return (
         <div>
             <HamburgerStyled onClick={handleVisibility}>
-                <HamburgerBoxStyled>
-                    <HamburgerInnerStyled class="hamburger__inner" />
+                <HamburgerBoxStyled colors={colors}>
+                    <HamburgerInnerStyled colors={colors} class="hamburger__inner" />
                 </HamburgerBoxStyled>
             </HamburgerStyled>
             <RouterNav visibility={isVisible} unActive={handleVisibility}/>
