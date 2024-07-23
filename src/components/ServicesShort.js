@@ -49,11 +49,7 @@ const ServicesShort = () => {
     padding: 25px;
     color: #1a1a1a;
     font-size: 25px;
-<<<<<<< HEAD
     text-decoration: ${(props) => (props.underline ? 'underline' : 'none')};
-=======
-    text-decoration: ${(props) => (props.underline ? "underline" : "none")};
->>>>>>> 1c91cf7c871852cdf3f0e68b56475a2220d9466d
     font-weight: 500;
     margin: 0;
     text-align: center;
@@ -75,16 +71,10 @@ const ServicesShort = () => {
   `;
 
   return (
-<<<<<<< HEAD
     <StyledLink to="/services">
       <ServicesDivStyled>
         <SubjectStyled>NASZE USŁUGI</SubjectStyled>
         <TextStyle>Inteligentne rozwiązania dla domu marki GRENTON</TextStyle>
-=======
-    <StyledLink to='/services'>
-      <ServicesDivStyled>
-        <SubjectStyled>NASZE USŁUGI</SubjectStyled>
->>>>>>> 1c91cf7c871852cdf3f0e68b56475a2220d9466d
         <TextStyle>Monitoring</TextStyle>
         <TextStyle>Domofony</TextStyle>
         <TextStyle>Sieci światłowodowe</TextStyle>
