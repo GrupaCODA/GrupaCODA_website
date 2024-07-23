@@ -1,8 +1,6 @@
-import React from "react";
+import React from 'react';
 import styled from 'styled-components';
 import PropTypes from 'prop-types';
-
-
 
 const PartnersListStyled = styled.section`
     z-index: 1;
@@ -23,43 +21,38 @@ const PartnersListStyled = styled.section`
 `;
 
 const PartnersLogoStyled = styled.img`
+  width: 50%;
+  height: auto;
+  margin: 20px;
+
+  @media (min-width: 768px) {
     width: 50%;
-    height: auto;
-    margin: 20px;
-    
-    @media (min-width: 768px) {
-    
-    width: 50%;
-    
-    }
-    
-    @media (min-width: 1024px) {
-    width: 30%;
-   
-}
-    `;
+  }
 
+  @media (min-width: 1024px) {
+    width: 40%;
+  }
+`;
 
-const PartnersList = ({items}) => (
-
-
-    items.map(({image, id}) => {
-        return (
-            <PartnersListStyled key={id}>
-                <PartnersLogoStyled className='image' src={image}/>
-            </PartnersListStyled>
-        )
-    })
-)
+const PartnersList = ({ items }) =>
+  items.map(({ image, id }) => {
+    return (
+      <PartnersListStyled key={id}>
+        <PartnersLogoStyled className="image" src={image} />
+      </PartnersListStyled>
+    );
+  });
 
 PartnersList.propTypes = {
-    items: PropTypes.arrayOf(PropTypes.shape({
-        id: PropTypes.number,
-        image: PropTypes.string
-    })).isRequired
+  items: PropTypes.arrayOf(
+    PropTypes.shape({
+      id: PropTypes.number,
+      image: PropTypes.string,
+    })
+  ).isRequired,
 };
 
 PartnersList.defaultProps = {
-    items: []
-}
+  items: [],
+};
 export default PartnersList;
