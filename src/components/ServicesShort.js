@@ -1,16 +1,7 @@
-<<<<<<< HEAD
 import React from 'react';
 import styled from 'styled-components';
 import { Link } from 'react-router-dom';
 
-=======
-/** @format */
-
-import React from "react";
-import styled from "styled-components";
-import { Link } from "react-router-dom";
-
->>>>>>> 1c91cf7c871852cdf3f0e68b56475a2220d9466d
 const ServicesShort = () => {
   const ServicesDivStyled = styled.div`
     width: 100%;
