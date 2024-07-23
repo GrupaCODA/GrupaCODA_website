@@ -76,7 +76,10 @@ const SubjectStyled = styled.h2`
 const PartnersLogoStyled = styled.img`
   width: 100%;
   height: auto;
+
+  @media (min-width: 1024px) {
   margin: 0 30px 0 30px;
+  }
 
 
   }
