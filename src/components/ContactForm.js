@@ -183,6 +183,14 @@ const ContactForm = () => {
     justify-content: center;
     align-items: center;
 
+    div {
+      width: 100%;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+    }
+
     @media (min-width: 1024px) {
       width: 30%;
     }
@@ -257,12 +265,16 @@ const ContactForm = () => {
         <div>
           <TextStyle>Grupa CODA sp. z o.o.</TextStyle>
           <TextStyle>Kontakt biuro</TextStyle>
-          <AnchorStyle href="tel: +48-518-781-784">+48 518 781 784</AnchorStyle>
+          <AnchorStyle href="tel:+48-518-781-784">+48 518 781 784</AnchorStyle>
         </div>
         <div>
           <TextStyle>Lokalizacja</TextStyle>
           <AnchorStyle href="https://goo.gl/maps/YKHxmwmDdYnnntuK6">
-            Lwowska 34 41-500 Chorzów
+            ul. Lwowska 34 41-500 Chorzów
+          </AnchorStyle>
+          <TextStyle>Odział</TextStyle>
+          <AnchorStyle href="https://maps.app.goo.gl/zQCZGzJ3EeSfjrnz7">
+            ul. Pana Tadeusza 6A 21-400 Łuków
           </AnchorStyle>
         </div>
         <div>
