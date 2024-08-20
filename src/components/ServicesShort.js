@@ -5,7 +5,7 @@ import { Link } from 'react-router-dom';
 const ServicesShort = () => {
   const ServicesDivStyled = styled.div`
     width: 100%;
-    height: 100vh;
+    height: auto;
     border-top: 1px solid;
     border-color: #a5a5a5;
 
