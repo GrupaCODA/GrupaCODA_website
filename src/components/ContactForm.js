@@ -272,10 +272,6 @@ const ContactForm = () => {
           <AnchorStyle href="https://goo.gl/maps/YKHxmwmDdYnnntuK6">
             ul. Lwowska 34 41-500 Chorzów
           </AnchorStyle>
-          <TextStyle>Odział</TextStyle>
-          <AnchorStyle href="https://maps.app.goo.gl/zQCZGzJ3EeSfjrnz7">
-            ul. Pana Tadeusza 6A 21-400 Łuków
-          </AnchorStyle>
         </div>
         <div>
           <TextStyle>NIP</TextStyle>
